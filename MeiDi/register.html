@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+           *{
+    margin: 0px;
+    padding: 0px;
+}
+html,body,ol,ul,dl,li,dt,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,table,td,tr,th,fieldset{
+	margin:0;
+	padding:0;
+}
+fieldset,img{
+	border:none;
+}
+h1,h2,h3,h4,h5,h6,b,strong,i,em{
+	font-weight:normal;
+	font-style:normal;
+}
+ul,ol,li{
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+img{
+	vertical-align:middle;
+}
+.clearfn:after{
+	content:"";
+	height:0;
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+}
+                .header{
+            height: 44px;
+            background: #0092d8;
+        }
+        .header .a{
+            display: block;
+            width: 120px;
+            height: 44px;
+        }
+        .header .a img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .b{
+            width: 1190px;
+            height: 700px;
+            margin: 0 auto;
+            position: relative;
+            
+           
+        }
+        .b .b1{
+            position: absolute;
+            right: 520px;
+            top: 66px;
+            width: 560px;
+            height: 485px;
+        }
+        .b .b1 img{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            color: white;
+        }
+        .b .z{
+            width: 378px;
+            height: 481px;
+            border: 1px solid #999;
+          position: relative;
+          top: -480px;
+          right: -666px;
+        }
+        .b .z .z1{
+            width: 300px;
+            height: 402px;
+           
+            margin: 30px;
+           
+        }
+        .b .z .z1 .z2{
+            font-size: 25px;
+        }
+        .b .z .z1 input{
+            width: 295px;
+            height: 40px;
+            margin-top: 16px;
+        }
+        .b .z .z1 .z3{
+            width: 300px;
+            height: 36px;
+            font-size: 15px;
+        }
+        .b .z .z1 .z4{
+            width: 300px;
+            height: 18px;
+            font-size: 16px;
+        }
+        .b .z .z1 button{
+            width: 300px;
+            height: 40px;
+            background-color: #0092d8;
+            margin-top: 18px;
+        }
+         .b .z .z1 a{
+           display: block;
+           font-size: 18px;
+           margin-left: 156px;
+           margin-top: 10px;
+       }
+       .b .z #alert{
+           width: 300;
+           height: 30px;
+           font-size: 20px;
+           display: none;
+           color: red;
+       }
+    </style>
+    <script src = 'ajax.js'></script>
+    <script>
+        window.onload = function(){
+            var aBtn = document.getElementById("btn");
+            var aInputs = document.getElementsByTagName("input");
+            var oAlert = document.getElementById("alert");
+       
+        aBtn.onclick = function(){
+					$ajax({
+						method: "post",
+						url: "register.php",
+						data: {
+							username: aInputs[0].value,
+							password: aInputs[2].value,
+							repassword: aInputs[3].value,
+							createTime: (new Date()).getTime()
+						},
+						success: function(result){
+							// alert(result);
+							var obj = JSON.parse(result);
+							
+							
+							oAlert.style.display = 'block';
+							oAlert.innerHTML = obj.message;
+						},
+						error: function(msg){
+							alert(msg);
+						}
+					})
+				
+			}
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="a">
+            <img src="images/849454fb1a72072959cd47ef32e4ecab.jpg" alt="">
+        </div>
+    </div>
+<div class="b">
+        <div class="b1">
+            <a href=""><img src="images/a1.jpg" alt=""></a>
+            <div class="z">
+                <div class="z1">
+                    <div class="z2">使用手机号注册</div>
+                    <form action="">
+                        <input type="text" placeholder="手机号" name="username">
+                        <input type="text" placeholder="短信验证">
+                        <input type="text" placeholder="密码" name="password">
+                        <input type="text" placeholder="确认密码" name="repassword">
+                    </form>
+                    <div id = 'alert' ></div>
+                    <span class="z3">密码长度必须在8位以上，含大小写字母、数字、符号至少三种</span><br>
+                   
+                    <span class="z4">同意《美的官方商城用户注册协议》</span>
+                    <button id="btn">注册</button>
+                    <a href="login.html">已有账号？请登录</a></div>
+                </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+

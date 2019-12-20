@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+html, body, ol, ul, dl, li, dt, dd, h1, h2, h3, h4, h5, h6, p, input, select, textarea, table, td, tr, th, fieldset {
+  margin: 0;
+  padding: 0; }
+
+fieldset, img {
+  border: none; }
+
+h1, h2, h3, h4, h5, h6, b, strong, i, em {
+  font-weight: normal;
+  font-style: normal; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+img {
+  vertical-align: middle; }
+
+.clearfn:after {
+  content: "";
+  height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden; }
+
+.header {
+  height: 46px;
+  background-color: #0092d8; }
+  .header .a {
+    display: block;
+    width: 88px;
+    height: 46px; }
+    .header .a img {
+      width: 100%;
+      height: 100%; }
+
+.b {
+  width: 1800px;
+  height: 1200px;
+  margin: 0 auto; }
+  .b .b1 {
+    width: 1800px;
+    height: 200px;
+    border-bottom: 2px solid #999; }
+    .b .b1 li {
+      font-size: 30px;
+      float: left;
+      margin-left: 255px;
+      margin-top: 136px; }
+    .b .b1 .b2 {
+      margin-left: 336px; }
+  .b #clearBtn {
+    width: 120px;
+    height: 49px; }
+  .b .shop {
+    width: 1800px;
+    height: 1800px; }
+    .b .shop ul li {
+      width: 1800px;
+      height: 160px;
+      margin-top: 20px; }
+      .b .shop ul li .sc_goodsPic {
+        float: left;
+        width: 250px;
+        height: 150px;
+        margin-left: 266px; }
+        .b .shop ul li .sc_goodsPic img {
+          width: 100%;
+          height: 100%; }
+      .b .shop ul li .sc_goodsTitle {
+        float: left;
+        margin-left: 140px;
+        margin-top: 60px; }
+        .b .shop ul li .sc_goodsTitle p {
+          font-size: 40px; }
+      .b .shop ul li .sc_goodsBtn {
+        float: left;
+        font-size: 30px;
+        margin-left: 240px;
+        margin-top: 66px; }
+      .b .shop ul li .delete_goodsBtn {
+        float: left;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 66px; }
+      .b .shop ul li .sc_goodsNum {
+        float: left;
+        margin-left: 216px; }
+        .b .shop ul li .sc_goodsNum button {
+          width: 40px;
+          height: 40px;
+          margin-top: 66px; }
+        .b .shop ul li .sc_goodsNum span {
+          font-size: 20px;
+          margin-left: 280px; }
